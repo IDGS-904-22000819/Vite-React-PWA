@@ -6,9 +6,52 @@ import './App.css'
 import EmployeeActions from "./components/EmployeeActions";
 import EmployeeTable from "./components/EmployeeTable";
 
+// Datos de empleados por defecto
+const defaultEmployees = [
+  {
+    id: 1,
+    nombre: "Juan",
+    apellido: "Pérez",
+    numero: "555-0101",
+    correo: "juan.perez@empresa.com",
+    salario: "45000"
+  },
+  {
+    id: 2,
+    nombre: "María",
+    apellido: "García",
+    numero: "555-0102",
+    correo: "maria.garcia@empresa.com",
+    salario: "52000"
+  },
+  {
+    id: 3,
+    nombre: "Carlos",
+    apellido: "López",
+    numero: "555-0103",
+    correo: "carlos.lopez@empresa.com",
+    salario: "48000"
+  },
+  {
+    id: 4,
+    nombre: "Ana",
+    apellido: "Martínez",
+    numero: "555-0104",
+    correo: "ana.martinez@empresa.com",
+    salario: "55000"
+  },
+  {
+    id: 5,
+    nombre: "Luis",
+    apellido: "Rodríguez",
+    numero: "555-0105",
+    correo: "luis.rodriguez@empresa.com",
+    salario: "42000"
+  }
+];
 
 function App() {
-    const [employees, setEmployees] = useState([]);
+    const [employees, setEmployees] = useState(defaultEmployees);
 
 const handleAddEmployee = (newEmployee) => {
   // Crear id
